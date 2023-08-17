@@ -1,0 +1,130 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "title": "Смартфон",
+      "description": null
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "title": "Ноутбук",
+      "description": null
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "title": "Видеокарта",
+      "description": null
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "title": "iphone 14",
+      "description": "",
+      "image": "",
+      "category": 1,
+      "purchase_price": 89000,
+      "date_of_creation": "2023-08-17",
+      "date_of_last_modification": "2023-08-17"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "title": "iphone 12",
+      "description": "",
+      "image": "",
+      "category": 1,
+      "purchase_price": 69000,
+      "date_of_creation": "2023-08-17",
+      "date_of_last_modification": "2023-08-17"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "title": "samsung galaxy s23 ultra",
+      "description": "",
+      "image": "",
+      "category": 1,
+      "purchase_price": 110000,
+      "date_of_creation": "2023-08-17",
+      "date_of_last_modification": "2023-08-17"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "title": "Apple MacBook Pro",
+      "description": "",
+      "image": "",
+      "category": 2,
+      "purchase_price": 105000,
+      "date_of_creation": "2023-08-17",
+      "date_of_last_modification": "2023-08-17"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "title": "Acer Nitro 5",
+      "description": "",
+      "image": "",
+      "category": 2,
+      "purchase_price": 96000,
+      "date_of_creation": "2023-08-17",
+      "date_of_last_modification": "2023-08-17"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "title": "MSI Bravo 15",
+      "description": "",
+      "image": "",
+      "category": 2,
+      "purchase_price": 99000,
+      "date_of_creation": "2023-08-17",
+      "date_of_last_modification": "2023-08-17"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+      "title": "GIGABYTE GeForce RTX 4090",
+      "description": "",
+      "image": "",
+      "category": 3,
+      "purchase_price": 204000,
+      "date_of_creation": "2023-08-17",
+      "date_of_last_modification": "2023-08-17"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+      "title": "Radeon pro w7800",
+      "description": "",
+      "image": "",
+      "category": 3,
+      "purchase_price": 219000,
+      "date_of_creation": "2023-08-17",
+      "date_of_last_modification": "2023-08-17"
+    }
+  }
+]
