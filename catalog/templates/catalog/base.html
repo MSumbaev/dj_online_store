@@ -32,7 +32,7 @@
                 <h5>Категории</h5>
                 <ul class="list-unstyled text-small">
                     {% for cat in categories_list %}
-                    <li><a class="text-muted" href="#">{{cat.title}}</a></li>
+                    <li><a class="text-muted" href="{% url 'catalog:category' cat.pk %}">{{cat.title}}</a></li>
                     {% endfor %}
                 </ul>
             </div>
