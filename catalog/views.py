@@ -14,6 +14,7 @@ def home(request):
 
     return render(request, 'catalog/home.html', context)
 
+
 def category(request, pk):
     product_list = Product.objects.filter(category_id=pk)
     category_obj = Category.objects.get(pk=pk)
@@ -23,7 +24,7 @@ def category(request, pk):
         'title': category_obj.title,
     }
 
-    return render(request, 'catalog/home.html', context)
+    return render(request, 'catalog/category.html', context)
 
 
 def product(request, pk):
