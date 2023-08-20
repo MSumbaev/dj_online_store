@@ -14,6 +14,27 @@ def home(request):
 
     return render(request, 'catalog/home.html', context)
 
+def category(request, pk):
+    product_list = Product.objects.filter(category_id=pk)
+    category_obj = Category.objects.get(pk=pk)
+    context = {
+        'object_list': product_list,
+        'category': category_obj,
+        'title': category_obj.title,
+    }
+
+    return render(request, 'catalog/home.html', context)
+
+
+def product(request, pk):
+    product_obj = Product.objects.get(pk=pk)
+    context = {
+        'object': product_obj,
+        'title': 'SkyStore',
+    }
+
+    return render(request, 'catalog/product.html', context)
+
 
 def contacts(request):
     context = {
