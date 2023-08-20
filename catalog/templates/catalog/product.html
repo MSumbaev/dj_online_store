@@ -1,7 +1,8 @@
 {% extends 'catalog/base.html' %}
+{% load my_tags %}
 
 {% block content %}
-<img src="/media/{{object.image}}" class="img-fluid" alt="Card image cap">
+<img src="{{ object.image|mymedia }}" class="img-fluid" alt="Card image cap">
 <div class="card mb-4 box-shadow">
     <div class="card-header">
         <h3 class="my-0 font-weight-normal">{{object.title}}</h3>
