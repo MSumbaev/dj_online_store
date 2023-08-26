@@ -8,33 +8,28 @@
 </head>
 <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-    <h5 class="my-0 mr-md-auto font-weight-normal">Skystore</h5>
+    <h1 class="my-0 mr-md-auto font-weight-normal">Skystore</h1>
     <nav class="ms-5">
         <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:home' %}">Каталог</a>
         <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:contacts' %}">Контакты</a>
+        <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:category_list' %}">Категории</a>
     </nav>
 </div>
 
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center ">
     <h1 class="display-4">{{title}}</h1>
-</div>
+</div><br><br>
 
 <div class="container">
+
     {% block content %}
     {% endblock %}
+
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
             <div class="col-12 col-md">
                 SkyStore
                 <small class="d-block mb-3 text-muted">&copy; 2023</small>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Категории</h5>
-                <ul class="list-unstyled text-small">
-                    {% for cat in categories_list %}
-                    <li><a class="text-muted" href="{% url 'catalog:category' cat.pk %}">{{cat.title}}</a></li>
-                    {% endfor %}
-                </ul>
             </div>
             <div class="col-6 col-md">
                 <h5>Дополнительно</h5>

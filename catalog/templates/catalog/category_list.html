@@ -1,0 +1,28 @@
+{% extends 'catalog/base.html' %}
+
+{% block content %}
+<a href="{% url 'catalog:category_create' %}" type="button"
+   class="btn btn-lg btn-outline-primary mb-5">Добавить категорию</a>
+<div class="row text-center">
+    {% for object in object_list %}
+    <div class="col-3">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h3 class="my-0 font-weight-normal">{{object.title}}</h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-3 text-start m-3">
+                    <li>{{object.description|truncatechars:100}}</li>
+                </ul>
+                <a href="{% url 'catalog:category' object.pk %}" type="button"
+                   class="btn btn-lg btn-block btn-outline-primary mb-3">Перейти</a>
+                <a href="{% url 'catalog:category_update' object.pk %}" type="button"
+                   class="btn btn-outline-warning float-left">Изменить</a>
+                <a href="{% url 'catalog:category_delete' object.pk %}" type="button"
+                   class="btn btn-outline-danger float-right">Удалить</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
