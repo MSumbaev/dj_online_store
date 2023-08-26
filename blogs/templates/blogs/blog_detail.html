@@ -1,0 +1,25 @@
+{% extends 'catalog/base.html' %}
+
+{% block content %}
+
+<div class="col-12">
+    <div class="row">
+        <div class="col-6">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h3 class="my-0 font-weight-normal">{{object.title}}</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+                        <li>{{object.body}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="/media/{{ object.image }}" class="img-fluid" alt="Card image cap">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
