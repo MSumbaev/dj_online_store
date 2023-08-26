@@ -1,18 +1,20 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
-from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
+from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView, TemplateView
 
 from catalog.models import Product, Category
 
 
-def home(request):
-    product_list = Product.objects.all().order_by('date_of_last_modification')
-    context = {
-        'object_list': product_list,
-        'title': 'Все товары'
-    }
+class HomeView(TemplateView):
+    template_name = 'catalog/home.html'
 
-    return render(request, 'catalog/home.html', context)
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+
+        context_data['object_list'] = Product.objects.all().order_by('-date_of_last_modification')[:5]
+        context_data['title'] = 'SkyStore - главная'
+
+        return context_data
 
 
 class CategoryCreateView(CreateView):

@@ -1,9 +1,10 @@
 {% extends 'catalog/base.html' %}
 
 {% block content %}
-    <div class="row text-center">
-        {% for object in object_list %}
-            {% include 'catalog/includes/inc_card_product.html' %}
-        {% endfor %}
-    </div>
+<h3>Последние 5 измененных товаров:</h3><br>
+<div class="row text-center">
+    {% for object in object_list %}
+    {% include 'catalog/includes/inc_card_product.html' %}
+    {% endfor %}
+</div>
 {% endblock %}
