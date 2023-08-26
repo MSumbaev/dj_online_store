@@ -8,11 +8,15 @@
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
                     <h3 class="my-0 font-weight-normal">{{object.title}}</h3>
+                    <h4 class="my-0 font-weight-normal">slug: {{object.slug}}</h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4 text-start m-3">
                         <li>{{object.body}}</li>
                     </ul>
+                </div>
+                <div class="card-footer">
+                    Просмотры: {{ object.views_count }}
                 </div>
             </div>
         </div>
