@@ -27,7 +27,7 @@ class BlogDetailView(DetailView):
 class BlogListView(ListView):
     model = Blog
     extra_context = {
-        'title': 'Список блогов'
+        'title': 'Статьи'
     }
 
 
