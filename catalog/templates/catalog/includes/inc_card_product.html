@@ -2,19 +2,22 @@
     <div class="card mb-4 box-shadow">
         <div class="card-header">
             <h4 class="my-0 font-weight-normal">{{ object.title }}</h4>
+            <li>Версия: {{ object.active_version_number}} - {{ object.active_version_title }}</li>
         </div>
         <div class="card-body">
             <h3 class="card-title pricing-card-title">{{ object.purchase_price }} руб.</h3>
             <ul class="list-unstyled mt-3 mb-4 text-start m-3">
                 <li>{{ object.description|truncatechars:100 }}</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-lg btn-block btn-primary">Купить</button>
             <a href="{% url 'catalog:product_detail_view' object.pk %}" type="button"
-               class="btn btn-lg btn-block btn-outline-primary mb-3">Посмотреть</a>
+               class="btn btn-lg btn-block btn-primary mb-3">Посмотреть</a>
             <a href="{% url 'catalog:product_update' object.pk %}" type="button"
-               class="btn btn-outline-warning float-left">Изменить</a>
-            <a href="{% url 'catalog:product_delete' object.pk %}" type="button"
-               class="btn btn-outline-danger float-right">Удалить</a>
+               class="btn float-left">Изменить</a>
+            <a href="{% url 'catalog:product_delete' object.pk %}"
+               class="btn float-right">Удалить</a>
         </div>
     </div>
 </div>
