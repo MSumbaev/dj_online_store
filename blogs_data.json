@@ -1,0 +1,54 @@
+[
+  {
+    "model": "blogs.blog",
+    "pk": 1,
+    "fields": {
+      "title": "Блог_1",
+      "slug": "blog1",
+      "body": "текст блога номер 1",
+      "preview": "",
+      "date_of_creation": "2023-08-26",
+      "is_published": true,
+      "views_count": 3
+    }
+  },
+  {
+    "model": "blogs.blog",
+    "pk": 6,
+    "fields": {
+      "title": "Cтатья №1",
+      "slug": "ctatya-1",
+      "body": "Что-то написано",
+      "preview": "",
+      "date_of_creation": "2023-08-26",
+      "is_published": true,
+      "views_count": 2
+    }
+  },
+  {
+    "model": "blogs.blog",
+    "pk": 7,
+    "fields": {
+      "title": "Тестовый блог",
+      "slug": "testovyij-blog",
+      "body": "Какой-то тестовый текст.",
+      "preview": "",
+      "date_of_creation": "2023-08-26",
+      "is_published": true,
+      "views_count": 3
+    }
+  },
+  {
+    "model": "blogs.blog",
+    "pk": 8,
+    "fields": {
+      "title": "Не опубликовано",
+      "slug": "ne-opublikovano",
+      "body": "тест",
+      "preview": "",
+      "date_of_creation": "2023-08-27",
+      "is_published": false,
+      "views_count": 1
+    }
+  }
+]
