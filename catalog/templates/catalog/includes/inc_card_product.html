@@ -2,7 +2,8 @@
     <div class="card mb-4 box-shadow">
         <div class="card-header">
             <h4 class="my-0 font-weight-normal">{{ object.title }}</h4>
-            <li>Версия: {{ object.active_version_number}} - {{ object.active_version_title }}</li>
+            <li>Версия: {{ object.active_version_number|default:"-" }} - {{ object.active_version_title|default:"-" }}</li>
+            <span class="text-muted">{{ object.owner|default:"Anonim" }}</span>
         </div>
         <div class="card-body">
             <h3 class="card-title pricing-card-title">{{ object.purchase_price }} руб.</h3>
