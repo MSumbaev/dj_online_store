@@ -6,6 +6,7 @@ from django.views.generic import CreateView, ListView, DetailView, UpdateView, D
 
 from catalog.forms import ProductForm, VersionForm, CategoryForm
 from catalog.models import Product, Category, Version
+from catalog.services import get_cached_categories
 
 
 class HomeView(TemplateView):
@@ -52,6 +53,10 @@ class CategoryListView(ListView):
     extra_context = {
         'title': 'Категории товаров'
     }
+
+    def get_queryset(self):
+        queryset = get_cached_categories()
+        return queryset
 
 
 class ProductsListView(ListView):
